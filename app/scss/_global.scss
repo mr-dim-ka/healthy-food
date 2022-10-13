@@ -1,0 +1,70 @@
+html,
+body {
+	height: 100%;
+	position: relative;
+	overflow-x: hidden;
+}
+body {
+	font-family: "Helvetica Neue";
+	font-style: normal;
+	font-weight: 400;
+	line-height: 1.675;
+	color: #fff;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+	min-height: 100%;
+}
+.main {
+	flex: 1 1 auto;
+}
+.footer {
+	flex: 0 0 auto;
+}
+[class*="__container"] {
+	max-width: $maxWidthContainer + px;
+	margin: 0 auto;
+	padding: 0 15px;
+}
+.container-fluid {
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+@media (max-width: 768px) {
+	.container-fluid {
+		padding: 0 15px;
+	}
+}
+
+// .breadcrumbs {
+// 	&__inner {
+// 		padding: 45px 0px 40px;
+// 	}
+// 	&__list {
+// 		li {
+// 			display: inline-block;
+// 			position: relative;
+// 			& + li {
+// 				padding-left: 24px;
+// 				&::before {
+// 					content: "-";
+// 					position: absolute;
+// 					left: 8px;
+// 					color: $green;
+// 				}
+// 			}
+// 			&:last-child {
+// 				a,
+// 				span {
+// 					color: $bg;
+// 				}
+// 			}
+// 		}
+// 		a {
+// 			color: #b0bec5;
+// 		}
+// 	}
+// }

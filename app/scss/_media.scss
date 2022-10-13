@@ -1,0 +1,37 @@
+// // @media (max-width: px) {
+// // }
+// /* Условные ПК, ноуты и телевизоры */
+// /* 1050 из макета (контейнер + отступы) */
+// @media (max-width: 1050px) {
+// }
+// /* Условные планшеты */
+// @media (max-width: 991.98px) {
+// }
+// /* Условные мобилки */
+// @media (max-width: 767.98px) {
+// }
+
+// /* №1 */
+// @media (max-width: 1050px) {
+// 	[class*="__container"] {
+// 		/* max-width: 970px; */
+// 	}
+// }
+// /* №2 */
+// @media (max-width: 991.98px) {
+// 	[class*="__container"] {
+// 		/* max-width: 750px; */
+// 	}
+// }
+// /* №3 */
+// @media (max-width: 767.98px) {
+// 	[class*="__container"] {
+// 		/* max-width: none; */
+// 	}
+// }
+// /* №4 */
+// @media (max-width: 479.98px) {
+// 	[class*="__container"] {
+// 		/* max-width: none; */
+// 	}
+// }
