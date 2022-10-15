@@ -71,7 +71,8 @@ body {
 		font-weight: 900;
 		@include adaptiv-value("font-size", 100, 90, 1);
 		line-height: 1.5;
-		letter-spacing: 3.2px;
+		@include adaptiv-value("letter-spacing", 20, 10, 1);
+		text-transform: uppercase;
 		color: #303030;
 		position: relative;
 	}
@@ -83,10 +84,21 @@ body {
 		font-weight: 400;
 		@include adaptiv-value("font-size", 30, 16, 1);
 		line-height: 2;
-		letter-spacing: 3.2px;
+		letter-spacing: 6px;
+		text-transform: capitalize;
 		color: #d9d9d9;
-		display: block;
 		width: 100%;
+	}
+
+	&::before {
+		content: "";
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		width: 60px;
+		height: 2px;
+		background-color: $color-green;
 	}
 }
 

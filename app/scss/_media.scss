@@ -36,6 +36,11 @@
 // 	}
 // }
 
+@media (max-width: ($maxWidth + px)) {
+	.basics {
+		@include adaptiv-value("margin-top", -240, -150, 1);
+	}
+}
 @media (max-width: 767.98px) {
 	.menu {
 		position: absolute;
@@ -83,10 +88,14 @@
 			transform: scale(0);
 		}
 	}
+	.work__item {
+		flex: 1 1 50%;
+	}
 }
-@media (max-width: ($maxWidth + px)) {
-	.basics {
-		@include adaptiv-value("margin-top", -240, -150, 1);
+
+@media (max-width: 479.98px) {
+	.work__item {
+		flex: 1 1 auto;
 	}
 }
 

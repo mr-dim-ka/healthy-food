@@ -323,5 +323,99 @@
 }
 
 //========================================================================================
+
+.work {
+	@include adaptiv-value("padding-top", 90, 20, 1);
+	padding-bottom: 30px;
+
+	// .work__container
+
+	&__container {
+	}
+
+	// .work__title
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+
+	// .work__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		row-gap: 30px;
+	}
+
+	// .work__item
+
+	&__item {
+		padding: 0 15px;
+		flex: 1 1 25%;
+	}
+}
+.item-work {
+	height: 100%;
+	padding: 25px 25px 40px 25px;
+	@include adaptiv-value("padding", 25, 15, 1);
+	background-color: #252525;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 6px;
+	transition: all 0.5s ease 0s;
+
+	// .item-work__title
+
+	&__title {
+		font-size: 22px;
+		line-height: 1.18;
+		letter-spacing: -0.275px;
+		text-transform: capitalize;
+		position: relative;
+		padding-bottom: 15px;
+		transition: all 0.5s ease 0s;
+
+		&:not(:last-child) {
+			margin-bottom: 25px;
+		}
+
+		&::before {
+			content: "";
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 60px;
+			height: 2px;
+			background-color: $color-green;
+		}
+	}
+
+	// .item-work__text
+
+	&__text {
+		font-size: 13px;
+		line-height: 1.38;
+		letter-spacing: -0.1625px;
+		color: rgba(255, 255, 255, 0.5);
+		transition: all 0.5s ease 0s;
+	}
+
+	&:hover {
+		background-color: $color-green;
+		.item-work__title {
+			color: #000;
+			&::before {
+				background-color: #000;
+			}
+		}
+		.item-work__text {
+			color: #000;
+		}
+	}
+}
+
+//========================================================================================
 @import "_media";
 //========================================================================================
