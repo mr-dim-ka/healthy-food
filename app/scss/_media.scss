@@ -107,6 +107,9 @@
 	.button_grey {
 		width: 100%;
 	}
+	.chefs__item {
+		flex: 0 1 50%;
+	}
 }
 
 @media (max-width: 479.98px) {
@@ -114,6 +117,9 @@
 		flex: 1 1 auto;
 	}
 	.dishes__item {
+		flex: 1 1 auto;
+	}
+	.chefs__item {
 		flex: 1 1 auto;
 	}
 }
