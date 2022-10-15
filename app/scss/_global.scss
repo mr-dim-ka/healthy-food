@@ -64,6 +64,32 @@ body {
 	}
 }
 
+.title {
+	position: relative;
+	text-align: center;
+	span {
+		font-weight: 900;
+		@include adaptiv-value("font-size", 100, 90, 1);
+		line-height: 1.5;
+		letter-spacing: 3.2px;
+		color: #303030;
+		position: relative;
+	}
+	h3 {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-weight: 400;
+		@include adaptiv-value("font-size", 30, 16, 1);
+		line-height: 2;
+		letter-spacing: 3.2px;
+		color: #d9d9d9;
+		display: block;
+		width: 100%;
+	}
+}
+
 // .breadcrumbs {
 // 	&__inner {
 // 		padding: 45px 0px 40px;
