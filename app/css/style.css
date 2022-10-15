@@ -187,7 +187,7 @@ template {
 }
 
 @font-face {
-  font-family: "HelveticaNeueCondensed";
+  font-family: "HelveticaNeue";
   font-display: swap;
   src: url("../fonts/HelveticaNeueCondensedBlack.woff") format("woff"), url("../fonts/HelveticaNeueCondensedBlack.woff2") format("woff2");
   font-weight: 900;
@@ -195,7 +195,7 @@ template {
 }
 
 @font-face {
-  font-family: "HelveticaNeueCondensed";
+  font-family: "HelveticaNeue";
   font-display: swap;
   src: url("../fonts/HelveticaNeueCondensedBold.woff") format("woff"), url("../fonts/HelveticaNeueCondensedBold.woff2") format("woff2");
   font-weight: 700;
@@ -203,7 +203,7 @@ template {
 }
 
 @font-face {
-  font-family: "HelveticaNeueRoman";
+  font-family: "HelveticaNeue";
   font-display: swap;
   src: url("../fonts/HelveticaNeueRoman.woff") format("woff"), url("../fonts/HelveticaNeueRoman.woff2") format("woff2");
   font-weight: 400;
@@ -297,7 +297,7 @@ body {
 }
 
 body {
-  font-family: "Helvetica Neue";
+  font-family: "HelveticaNeue";
   font-style: normal;
   font-weight: 400;
   line-height: 1.675;
@@ -339,6 +339,32 @@ body {
   max-width: 100%;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.button {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.22;
+  text-align: center;
+  letter-spacing: 3.2px;
+  color: #1f1f1f;
+  background-color: #34c759;
+  border-radius: 43px;
+  padding: 25px 58px;
+  padding-top: 25px;
+  padding-right: 58px;
+  padding-bottom: 25px;
+  padding-left: 58px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  border: 1px solid transparent;
+}
+
+.button:hover {
+  color: #34c759;
+  background-color: #1f1f1f;
+  border: 1px solid #fff;
 }
 
 .header {
@@ -443,9 +469,128 @@ body {
   color: #34c759;
 }
 
+.food {
+  min-height: 1080px;
+  background: url("../images/main/main-bg.png") top right/cover no-repeat;
+}
+
+.food__container {
+  padding-top: calc(120px + 50 * ((100vw - 320px) / 1120));
+}
+
+.food__content {
+  max-width: 940px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0px auto;
+}
+
+.food__content:not(:last-child) {
+  margin-bottom: 70px;
+}
+
+.food__title {
+  font-size: 72px;
+  font-size: calc(40px + 32 * ((100vw - 320px) / 1120));
+  line-height: 1.17;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+}
+
+.food__title span {
+  font-weight: 400;
+}
+
+.food__title:not(:last-child) {
+  margin-bottom: 16px;
+}
+
+.food__text {
+  max-width: 595px;
+  font-size: calc(14px + 2 * ((100vw - 320px) / 1120));
+}
+
+.food__text:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.food__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 30px;
+}
+
+.food__item {
+  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+}
+
+.item-food {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-width: 190px;
+}
+
+.item-food__icon:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.item-food__info {
+  line-height: 1.88;
+  text-align: center;
+}
+
+.item-food__text {
+  font-size: 14px;
+  line-height: 2;
+  opacity: 0.5;
+}
+
 @media (min-width: 767.98px) {
   .header__burger {
     display: none;
+  }
+}
+
+@media (max-width: 1110px) {
+  .button {
+    padding-top: calc(15px + 10 * ((100vw - 320px) / 790));
+  }
+
+  .button {
+    padding-right: calc(30px + 28 * ((100vw - 320px) / 790));
+  }
+
+  .button {
+    padding-bottom: calc(15px + 10 * ((100vw - 320px) / 790));
+  }
+
+  .button {
+    padding-left: calc(30px + 28 * ((100vw - 320px) / 790));
   }
 }
 

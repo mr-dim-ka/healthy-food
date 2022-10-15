@@ -5,7 +5,7 @@ body {
 	overflow-x: hidden;
 }
 body {
-	font-family: "Helvetica Neue";
+	font-family: "HelveticaNeue";
 	font-style: normal;
 	font-weight: 400;
 	line-height: 1.675;
@@ -37,6 +37,30 @@ body {
 @media (max-width: 768px) {
 	.container-fluid {
 		padding: 0 15px;
+	}
+}
+
+.button {
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 1.22;
+	text-align: center;
+	letter-spacing: 3.2px;
+	color: #1f1f1f;
+	background-color: $color-green;
+	border-radius: 43px;
+	padding: 25px 58px;
+	@include adaptiv-value("padding-top", 25, 15, 1);
+	@include adaptiv-value("padding-right", 58, 30, 1);
+	@include adaptiv-value("padding-bottom", 25, 15, 1);
+	@include adaptiv-value("padding-left", 58, 30, 1);
+	transition: all 0.3s ease 0s;
+	border: 1px solid transparent;
+
+	&:hover {
+		color: $color-green;
+		background-color: #1f1f1f;
+		border: 1px solid #fff;
 	}
 }
 
