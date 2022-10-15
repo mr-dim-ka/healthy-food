@@ -34,3 +34,16 @@
 		#{$property}: calc(#{$minSize + px} + #{$addSize} * ((100vw - 320px) / #{$maxWidth - 320}));
 	}
 }
+
+@mixin ibg($position: center) {
+	position: relative;
+	img {
+		object-fit: cover;
+		object-position: $position;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+}

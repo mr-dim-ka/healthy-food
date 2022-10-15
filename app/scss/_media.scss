@@ -91,10 +91,29 @@
 	.work__item {
 		flex: 1 1 50%;
 	}
+	.dishes__item {
+		flex: 1 1 50%;
+	}
+	.item-dishes__actions {
+		flex-direction: column;
+		row-gap: 40px;
+	}
+	.rating {
+		font-size: 40px;
+	}
+	.rating__value {
+		font-size: 50%;
+	}
+	.button_grey {
+		width: 100%;
+	}
 }
 
 @media (max-width: 479.98px) {
 	.work__item {
+		flex: 1 1 auto;
+	}
+	.dishes__item {
 		flex: 1 1 auto;
 	}
 }

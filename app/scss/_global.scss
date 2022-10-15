@@ -49,11 +49,6 @@ body {
 	color: #1f1f1f;
 	background-color: $color-green;
 	border-radius: 43px;
-	padding: 25px 58px;
-	@include adaptiv-value("padding-top", 25, 15, 1);
-	@include adaptiv-value("padding-right", 58, 30, 1);
-	@include adaptiv-value("padding-bottom", 25, 15, 1);
-	@include adaptiv-value("padding-left", 58, 30, 1);
 	transition: all 0.3s ease 0s;
 	border: 1px solid transparent;
 
@@ -61,6 +56,25 @@ body {
 		color: $color-green;
 		background-color: #1f1f1f;
 		border: 1px solid #fff;
+	}
+
+	// .button_grey
+
+	&_grey {
+		background-color: #262626;
+		border: 2px solid #303030;
+		text-transform: uppercase;
+		font-size: 10px;
+		line-height: 1.3;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: rgba(255, 255, 255, 0.5);
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			border: 2px solid rgba(255, 255, 255, 0.5);
+			background-color: #303030;
+		}
 	}
 }
 
@@ -71,7 +85,7 @@ body {
 		font-weight: 900;
 		@include adaptiv-value("font-size", 100, 90, 1);
 		line-height: 1.5;
-		@include adaptiv-value("letter-spacing", 20, 10, 1);
+		@include adaptiv-value("letter-spacing", 20, 6, 1);
 		text-transform: uppercase;
 		color: #303030;
 		position: relative;

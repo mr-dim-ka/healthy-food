@@ -174,6 +174,10 @@
 	// .food__button
 
 	&__button {
+		@include adaptiv-value("padding-top", 25, 15, 1);
+		@include adaptiv-value("padding-right", 58, 30, 1);
+		@include adaptiv-value("padding-bottom", 25, 15, 1);
+		@include adaptiv-value("padding-left", 58, 30, 1);
 	}
 
 	// .food__items
@@ -190,6 +194,7 @@
 	&__item {
 		padding: 0 15px;
 		flex: 1 1 33.333%;
+		min-width: 190px;
 	}
 }
 
@@ -197,7 +202,6 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	min-width: 190px;
 	height: 100%;
 
 	// .item-food__icon
@@ -413,6 +417,288 @@
 		.item-work__text {
 			color: #000;
 		}
+	}
+}
+
+//========================================================================================
+
+.dishes {
+	@include adaptiv-value("padding-top", 90, 20, 1);
+	padding-bottom: 30px;
+
+	// .dishes__container
+
+	&__container {
+	}
+
+	// .dishes__title
+
+	&__title {
+		&:not(:last-child) {
+			margin-bottom: 60px;
+		}
+	}
+
+	// .dishes__items
+
+	&__items {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -15px;
+		row-gap: 30px;
+	}
+
+	// .dishes__item
+
+	&__item {
+		padding: 0 15px;
+		flex: 1 1 33.333%;
+	}
+}
+
+.item-dishes {
+	background-color: #252525;
+	box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+	border-radius: 6px;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+
+	// .item-dishes__picture
+
+	&__picture {
+		padding: 0px 0px 74.286% 0px;
+		@include ibg();
+	}
+
+	// .item-dishes__image
+
+	&__image {
+		border-top-left-radius: 6px;
+		border-top-right-radius: 6px;
+	}
+
+	// .item-dishes__icon
+
+	&__icon {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		border-radius: 50%;
+		top: 25px;
+		right: 25px;
+		background-color: rgba(0, 0, 0, 0.3);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		transition: all 0.3s ease 0s;
+
+		&:hover {
+			background-color: $color-green;
+		}
+	}
+
+	// .item-dishes__body
+
+	&__body {
+		display: flex;
+		flex-direction: column;
+		flex: 1 1 auto;
+		@include adaptiv-value("padding", 30, 15, 1);
+	}
+
+	// .item-dishes__title
+
+	&__title {
+		font-size: 32px;
+		line-height: 1;
+		color: #d9d9d9;
+	}
+
+	// .item-dishes__subtitle
+
+	&__subtitle {
+		font-size: 12px;
+		line-height: 1.33;
+		letter-spacing: -0.15px;
+		color: #a4a8b2;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	// .item-dishes__text
+
+	&__text {
+		font-size: 13px;
+		line-height: 1.38;
+		letter-spacing: -0.1625px;
+		color: #85878c;
+		flex: 1 1 auto;
+
+		&:not(:last-child) {
+			margin-bottom: 20px;
+		}
+	}
+
+	// .item-dishes__actions
+
+	&__actions {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		column-gap: 40px;
+		row-gap: 20px;
+		@include adaptiv-value("column-gap", 40, 5, 1);
+	}
+
+	// .item-dishes__form
+
+	&__form {
+	}
+
+	// .item-dishes__rating
+
+	&__rating {
+	}
+
+	// .item-dishes__button
+
+	&__button {
+		padding: 13px 30px;
+	}
+}
+// .simple-rating {
+// 	position: relative;
+// 	font-size: 16px;
+// 	display: inline-block;
+
+// 	&::before {
+// 		content: "★★★★★";
+// 		display: block;
+// 		// color: #4d4d4d;
+// 	}
+
+// 	// .simple-rating__items
+
+// 	&__items {
+// 		position: absolute;
+// 		width: 100%;
+// 		height: 100%;
+// 		top: 0;
+// 		left: 0;
+// 		display: flex;
+// 		flex-direction: row-reverse;
+// 		overflow: hidden;
+// 	}
+
+// 	// .simple-rating__item
+
+// 	&__item {
+// 		position: absolute;
+// 		width: 0%;
+// 		height: 0%;
+// 		top: 0;
+// 		left: 0;
+// 		opacity: 0;
+// 		visibility: hidden;
+// 	}
+
+// 	// .simple-rating__label
+
+// 	&__label {
+// 		flex: 0 0 20%;
+// 		height: 100%;
+// 		cursor: pointer;
+// 		color: #4d4d4d;
+
+// 		&::before {
+// 			content: "★";
+// 			display: block;
+// 			transition: color 0.3s ease 0s;
+// 		}
+// 	}
+// 	.simple-rating__item:checked,
+// 	.simple-rating__item:checked ~ .simple-rating__label {
+// 		color: #fa9600;
+// 	}
+// 	.simple-rating__label:hover,
+// 	.simple-rating__label:hover ~ .simple-rating__label,
+// 	.simple-rating__label:checked ~ .simple-rating__label:hover {
+// 		color: #f9ad3d;
+// 	}
+// }
+
+.rating {
+	display: flex;
+	align-items: center;
+	font-size: 16px;
+	line-height: 0.75;
+
+	// .rating__body
+
+	&__body {
+		position: relative;
+
+		&::before {
+			content: "★★★★★";
+			display: block;
+		}
+	}
+
+	// .rating__active
+
+	&__active {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+		overflow: hidden;
+
+		&::before {
+			content: "★★★★★";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			left: 0;
+			color: #f9ad3d;
+		}
+	}
+
+	// .rating__items
+
+	&__items {
+		display: flex;
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		left: 0;
+	}
+
+	// .rating__item
+
+	&__item {
+		flex: 0 0 20%;
+		height: 100%;
+		opacity: 0;
+		cursor: pointer;
+	}
+
+	// .rating__value
+
+	&__value {
+		font-weight: 700;
+		font-size: 12px;
+		line-height: 1;
+		letter-spacing: 1.5px;
+		color: #b3b3b3;
+		padding: 0px 0px 0px 15px;
 	}
 }
 
