@@ -1,8 +1,9 @@
 $(function () {
 
 	$('.header__burger').on('click', function () {
-		$('.header__burger').toggleClass('header__burger--active');
-		$('.header__menu').toggleClass('header__menu--active');
+		$('.header__burger').toggleClass('header__burger_active');
+		$('.header__menu').toggleClass('header__menu_active');
+		$('body').toggleClass('lock');
 	});
 
 	$('.slider-basics').slick({

@@ -14,11 +14,23 @@
 //========================================================================================
 
 .header {
-	position: absolute;
+	position: fixed;
 	top: 0px;
 	left: 0px;
 	width: 100%;
+	z-index: 50;
 	border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+
+	&::before {
+		content: "";
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(48, 48, 48, 0.9);
+		z-index: 2;
+	}
 	// .header__container
 
 	&__container {
@@ -27,6 +39,7 @@
 	// .header__body
 
 	&__body {
+		position: relative;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
@@ -34,13 +47,15 @@
 		column-gap: 15px;
 		row-gap: 15px;
 		padding: 10px 0;
-		min-height: 90px;
+		height: 90px;
 	}
 
 	// .header__logo
 
 	&__logo {
 		flex: 0 0 207px;
+		position: relative;
+		z-index: 3;
 	}
 
 	// .header__burger
@@ -50,6 +65,8 @@
 		display: block;
 		width: 30px;
 		height: 20px;
+		position: relative;
+		z-index: 3;
 
 		span {
 			position: absolute;
@@ -92,6 +109,8 @@
 
 	&__list {
 		display: flex;
+		position: relative;
+		z-index: 2;
 	}
 
 	// .menu__item
@@ -174,10 +193,10 @@
 	// .food__button
 
 	&__button {
-		@include adaptiv-value("padding-top", 25, 15, 1);
-		@include adaptiv-value("padding-right", 58, 30, 1);
-		@include adaptiv-value("padding-bottom", 25, 15, 1);
-		@include adaptiv-value("padding-left", 58, 30, 1);
+		@include adaptiv-value("padding-top", 25, 10, 1);
+		@include adaptiv-value("padding-right", 58, 25, 1);
+		@include adaptiv-value("padding-bottom", 25, 10, 1);
+		@include adaptiv-value("padding-left", 58, 25, 1);
 	}
 
 	// .food__items
