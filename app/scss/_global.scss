@@ -115,6 +115,22 @@ body {
 		background-color: $color-green;
 	}
 }
+.meal {
+	display: inline-block;
+	font-weight: 900;
+	font-size: 10px;
+	line-height: 1;
+	letter-spacing: 1.25px;
+	text-transform: uppercase;
+	border-radius: 4px;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 8px 15px;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
+}
 
 // .breadcrumbs {
 // 	&__inner {

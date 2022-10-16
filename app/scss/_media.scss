@@ -41,6 +41,12 @@
 		@include adaptiv-value("margin-top", -240, -150, 1);
 	}
 }
+
+@media (max-width: ($maxWidthContainer + px)) {
+	.recipes__rows {
+		flex-direction: column;
+	}
+}
 @media (max-width: 767.98px) {
 	.menu {
 		position: absolute;
@@ -108,7 +114,7 @@
 		width: 100%;
 	}
 	.chefs__item {
-		flex: 1 1 50%;
+		flex: 0 1 50%;
 	}
 }
 
