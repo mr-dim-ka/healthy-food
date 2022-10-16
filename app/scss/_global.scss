@@ -132,6 +132,20 @@ body {
 	}
 }
 
+.arrow-link {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.3);
+	padding: 14px;
+	border-radius: 50%;
+	transition: all 0.3s ease 0s;
+
+	&:hover {
+		background-color: rgba(0, 0, 0, 0.9);
+	}
+}
+
 // .breadcrumbs {
 // 	&__inner {
 // 		padding: 45px 0px 40px;

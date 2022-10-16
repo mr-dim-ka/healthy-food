@@ -446,6 +446,28 @@ body {
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.arrow-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 14px;
+  border-radius: 50%;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.arrow-link:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
 .header {
   position: absolute;
   top: 0px;
@@ -984,6 +1006,7 @@ body {
 
 .item-dishes__button {
   padding: 13px 30px;
+  width: 100%;
 }
 
 .rating {
@@ -1184,6 +1207,10 @@ body {
           flex: 1 1 50%;
 }
 
+.recipes__main {
+  height: 100%;
+}
+
 .recipes__items {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1193,6 +1220,7 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   margin: -15px 0;
+  height: 100%;
 }
 
 .recipes__item {
@@ -1225,25 +1253,6 @@ body {
   position: absolute;
   top: 30px;
   right: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  background-color: rgba(0, 0, 0, 0.3);
-  padding: 14px;
-  border-radius: 50%;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-}
-
-.main-recipes__link:hover {
-  background-color: rgba(0, 0, 0, 0.9);
 }
 
 .main-recipes__head:not(:last-child) {
@@ -1457,6 +1466,217 @@ body {
   transition: all 0.3s ease 0s;
 }
 
+.social {
+  padding-top: 90px;
+  padding-bottom: 30px;
+}
+
+.social__title:not(:last-child) {
+  margin-bottom: 40px;
+}
+
+.social__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -15px;
+  row-gap: 30px;
+}
+
+.social__item {
+  padding: 0 15px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+}
+
+.item-social {
+  background-color: #252525;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.item-social__top {
+  padding: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  row-gap: 10px;
+  padding-bottom: 25px;
+  border-bottom: 2px solid #303030;
+}
+
+.item-social__net {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  column-gap: 20px;
+}
+
+.item-social__net:hover .item-social__icon {
+  background-color: #4a4a4a;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.item-social__net:hover .item-social__soc {
+  color: #fff;
+}
+
+.item-social__icon {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40px;
+          flex: 0 0 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: 2px solid #303030;
+  border-radius: 50%;
+  padding: 3px;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.item-social__soc {
+  font-size: 14px;
+  line-height: 2;
+  color: #bfbfbf;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.item-social__button {
+  padding: 12px 20px;
+}
+
+.item-social__body {
+  padding: 25px;
+  padding-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 14px;
+  line-height: 2;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.item-social__body_pic {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.item-social__body_pic:hover .item-social__link {
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
+  opacity: 1;
+}
+
+.item-social__date {
+  color: #737373;
+}
+
+.item-social__date:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.item-social__text {
+  color: rgba(255, 255, 255, 0.7);
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+}
+
+.item-social__text:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.item-social__mail {
+  color: #34c759;
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.item-social__mail:hover {
+  color: #299f47;
+}
+
+.item-social__link {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -200%);
+      -ms-transform: translate(-50%, -200%);
+          transform: translate(-50%, -200%);
+  opacity: 0;
+  background-color: #34c759;
+  color: #4d4d4d;
+  -webkit-transition: all 0.3s ease 0s;
+  -o-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+}
+
+.item-social__picture {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 33.333%;
+          flex: 1 1 33.333%;
+  max-width: 115px;
+}
+
 @media (min-width: 767.98px) {
   .header__burger {
     display: none;
@@ -1627,11 +1847,40 @@ body {
     padding: calc(10px + 20 * ((100vw - 320px) / 820));
   }
 
-  .recipes__rows {
+  .social {
+    padding-top: calc(20px + 70 * ((100vw - 320px) / 820));
+  }
+
+  .item-social__top {
+    padding: calc(10px + 15 * ((100vw - 320px) / 820));
+  }
+
+  .item-social__top {
+    -webkit-column-gap: calc(5px + 15 * ((100vw - 320px) / 820));
+       -moz-column-gap: calc(5px + 15 * ((100vw - 320px) / 820));
+            column-gap: calc(5px + 15 * ((100vw - 320px) / 820));
+  }
+
+  .item-social__net {
+    -webkit-column-gap: calc(5px + 15 * ((100vw - 320px) / 820));
+       -moz-column-gap: calc(5px + 15 * ((100vw - 320px) / 820));
+            column-gap: calc(5px + 15 * ((100vw - 320px) / 820));
+  }
+
+  .item-social__body {
+    padding: calc(10px + 15 * ((100vw - 320px) / 820));
+  }
+}
+
+@media (max-width: 991.98px) {
+  .item-social__top {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 
@@ -1732,14 +1981,31 @@ body {
     font-size: 50%;
   }
 
-  .button_grey {
-    width: 100%;
-  }
-
   .chefs__item {
     -webkit-box-flex: 0;
         -ms-flex: 0 1 50%;
             flex: 0 1 50%;
+  }
+
+  .recipes__rows {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .social__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 50%;
+            flex: 1 1 50%;
+  }
+}
+
+@media (max-width: 539.98px) {
+  .social__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 auto;
+            flex: 1 1 auto;
   }
 }
 
@@ -1760,6 +2026,10 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .item-social__button {
+    width: 100%;
   }
 }
 

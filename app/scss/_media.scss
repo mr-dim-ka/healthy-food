@@ -43,8 +43,11 @@
 }
 
 @media (max-width: ($maxWidthContainer + px)) {
-	.recipes__rows {
+}
+@media (max-width: 991.98px) {
+	.item-social__top {
 		flex-direction: column;
+		align-items: flex-start;
 	}
 }
 @media (max-width: 767.98px) {
@@ -110,11 +113,20 @@
 	.rating__value {
 		font-size: 50%;
 	}
-	.button_grey {
-		width: 100%;
-	}
 	.chefs__item {
 		flex: 0 1 50%;
+	}
+	.recipes__rows {
+		flex-direction: column;
+	}
+	.social__item {
+		flex: 1 1 50%;
+	}
+}
+
+@media (max-width: 539.98px) {
+	.social__item {
+		flex: 1 1 auto;
 	}
 }
 
@@ -127,6 +139,9 @@
 	}
 	.chefs__item {
 		flex: 1 1 auto;
+	}
+	.item-social__button {
+		width: 100%;
 	}
 }
 
